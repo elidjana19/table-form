@@ -1,0 +1,40 @@
+Ne html krijoj nje div container ku vendos tabelen dhe dialog tag per te shfaqur formen.
+Pervec tabeles krijoj edhe butonin Add new person, i cili kur klikohet me hap formen.
+Dialog mban 2 butona si Close dhe Submit dhe formen me inpute te ndryshme. Kam perdorur input type text, date per datat dhe radioButtons per statusin
+dhe tipin e kartes, kam perdorur radioButton pasi ndryshe nga checkbox ai te lejoj te zgjedhesh vetem 1 nga opsionet.
+
+Ne css stilizoj dhe pozicionoj secilin nga elementet e krijuar ne html
+
+JS: ne js akesoj elementet e html duke perdorur getElementById ose querySelector, me pas krijoj nje array me objekte sic na ishte kerkuar.
+
+MEtoda e pare qe kam zhvilluar eshte showData, metode e cila krijon elementin tbody apo trupin e tabeles, dhe per secilin
+nga elementet e vektorit people, pra per secilin objekt shton nje rresht ne tabele dhe e mbush rreshtin me te dhena si 
+emri, mbiemri, mosh, startDate, endDate, pay, status dhe cardType.
+Gjithashtu per secilin rresht te tabeles shtoj edhe dy butona me opsionin per te edituar tedhenat 
+apo per ta fshire gjithe rreshtin. trupin e tabels e bej append tek tabela.
+
+E therras metoden showData() per ti afishuar te dhenat.
+
+Kur klikohet butoni Add a new Person, une afishoj dialog, nese forma eshte mbushur me pare une sigurohem qe ta pastroj dhe submit.onclick te therrase metoden addData per te shtuar te dhenat ne tabele.
+
+Kam ndertuar e dy funksione per te hapur dhe mbyllur dialog-un.
+
+Metoda addData eshte ajo qe une shtoj te dhena ne forme, pra metoda qe therras kur klikoj submit.
+marr gjithe te dhenat e vendosura ne forme me .value dhe i ruaj neper variabla te ndryshme, 
+kontrolloj nese jane vendosur te dhena tek te gjitha inputet, nese jo krijoj  nje alert.
+Nepermjet object literal une keto variabla i grupoj ne nje objekt, ne menyre qe objektin ta shtoj tek vektori people.
+
+Funksionin clearForm e kam ndertuar qe te pastroj formen, per stringat vendos' ' dhe per radio butons vendos property checked ne false, pra radio butons nuk jane
+bere checked.
+
+Kur butoni Delete te klikohet, me duhet te fshij nga tabela te dhenat e atij personi, prandaj kjo metode merr si argument indeksin e personit ku ky buton klikohet.
+Dhe duke perdorur splice(index, 1) une fshij 1 element ne ate indeks.
+
+Funksionaliteti i fundit eshte ai per te edituar te dhenat.
+Njesoj edhe si tek delete edhe tek edit une kaloj index si argument per te percaktuar se cilin
+person dua te editoj.
+Fillimisht une mbush formen me te dhenat e personit qe dua te editoj. Kete e kam realizuar duke krijuar metoden
+fillForm() e cila merr te dhenat e personit ne indeksin qe dua te fshij dhe me ato te dhena mbush formen.
+Pasi mbush formen hap dritaren e dialog  per te shfaqur formen me te dhenat
+dhe ne momentin qe bej submit tani une nuk duhet te shtoj nje rresht te ri por, rreshtin ekzistues pas ndryshimeve ta ruaj perseri ne vektor.
+Marr te dhenat e perditesuara nga forma me .value per secilin input, krijoj objektin dhe e vendos tek vektori tek indeksi kur isha duke bere edit te dhenat.

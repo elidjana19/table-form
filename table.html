@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Start date of subscription</th>
+            <th>End date of Subscription</th>
+            <th>Status</th>
+            <th>Pay</th>
+            <th>Payment card type</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <button id="add">Add new person</button>
+
+      <dialog>
+        <button id="close">Close</button>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+          <br />
+          <label for="lastname">Lastname</label>
+          <input type="text" id="lastname" required />
+          <br />
+          <label for="age">Age</label>
+          <input type="text" id="age" required />
+          <br />
+          <label for="startDateSubscription">Start date</label>
+          <input type="date" id="startDateSubscription" required />
+          <br />
+          <label for="endDateSubscription">End date</label>
+          <input type="date" id="endDateSubscription" required />
+          <br />
+          <label for="status">Status</label>
+
+          <label for="statusTrue">
+            <input
+              type="radio"
+              id="statusTrue"
+              name="status"
+              value="true"
+              required
+            />True</label
+          >
+
+          <label for="statusFalse">
+            <input
+              type="radio"
+              id="statusFalse"
+              name="status"
+              value="false"
+              required
+            />False</label
+          >
+          <br />
+          <label for="pay">Pay</label>
+          <input type="text" id="pay" required />
+          <br />
+          <label for="cardType">Payment card type</label>
+
+          <label for="visa">
+            <input
+              type="radio"
+              id="visa"
+              name="cardType"
+              value="Visa"
+              required
+            />Visa</label
+          >
+
+          <label for="mastercard">
+            <input
+              type="radio"
+              id="mastercard"
+              name="cardType"
+              value="MasterCard"
+              required
+            />MasterCard</label
+          >
+
+          <label for="paypal">
+            <input
+              type="radio"
+              id="paypal"
+              name="cardType"
+              value="PayPal"
+              required
+            />
+            PayPal</label
+          >
+          <br />
+        </form>
+        <button id="submit">ADD</button>
+      </dialog>
+    </div>
+
+    <script src="table.js"></script>
+  </body>
+</html>
